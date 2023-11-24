@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interacciones java script + HTML +CSS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="panel-lateral">
+        <a href="#" onclick="cerrarPanelLateral()" class="close">X</a>
+        <h2>Panel Lateral</h2>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Tienda</a></li>
+            <li><a href="#">Servicio</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </div>
+
+    <div class="panel-superior">
+        <a href="#" onclick="cerrarPanelSuperior()" class="close">X</a>
+        <h2>Panel Superior</h2>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Tienda</a></li>
+            <li><a href="#">Servicio</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </div>
+    
+
+    <section>
+        <div  class="left" id="leftElement">
+            <h2>Interacciones</h2>
+            <button onclick="circulo() ">circulo</button>
+            <button onclick="rectangulo()">rectangulo</button>
+            <button onclick="rombo()">rombo</button>
+            <button onclick="imagen()">Imagen</button>
+            <button onclick="gif()">GIF</button>
+            <button onclick="triangulo()">triangulo</button>
+            <button onclick="hoja()">Hoja</button>
+            <button onclick="pacMan()">pac man</button>
+            <button onclick="luna()">luna</button>
+            <button onclick="huevo()">huevo</button>
+            <button onclick="trapecio()">trapecio</button>
+            <button onclick="moveTop()">move Top</button>
+            <button onclick="moveLeft()">move Left</button>
+            <button onclick="moveBottom()">move Bottom</button>
+            <button onclick="moveRight()">move Rigth</button>
+            <button id="toggleButton" onclick="toggleBackground()">Cambiar Fondo</button>
+            <button onclick="cambiarColor()">Cambiar color</button>
+            <button onclick="mostrarPanelSuperior()">Panel Superior</button>
+            <button onclick="mostrarPanelLateral()">Panel Lateral</button>
+            <button id="toggleButton" onclick="toggleButton()">propuesta</button>
+        </div>
+        <div class="right" id="rightElement">
+            <h2>Figura</h2>
+            <div id="figura"></div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

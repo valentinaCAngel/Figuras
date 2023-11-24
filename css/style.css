@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-width: 100vw;
+    background: url(../img/fondo.jpg);
+    background-size: cover;
+    background-position: 50% 25%; /*para que se ve la imagen de fondo completa y no solo una parte*/
+    transition: background 0.5s ease;
+    
+
+}
+
+section{
+    width: 90%;
+    margin: 100px auto;
+    border: 20px solid #9ce9de ;
+    padding: 40px;
+    background:  #c7dcda ;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap; /* respete los ancho que estemos definiendo*/
+    border-radius: 20px;
+
+}
+section.active {
+    background-color: #e74c3c;
+    border-color: #c0392b;
+}
+
+h2{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    padding: 20px;
+   border-bottom: 1px solid ;
+   font-family: 'Agbalumo', cursive;
+}
+
+.left,
+.right{
+    width: 50%;
+    text-align: center;
+    border: 1px solid rosybrown;
+}
+
+button {
+    padding: 8px 30px;
+    background:  #fbabac;
+    color: white ;
+    font-size: 20px;
+    border-radius: 0 10px 0 10px;
+    border: 1px solid white;
+    transition: .4s;
+    cursor: pointer;
+    margin: 10px;
+    box-shadow: 0 0 4px 4px #fbabac;
+    font-family: 'Agbalumo', cursive;
+    
+
+}
+
+button:hover{
+    border-radius: 20px 0 20px 0;
+    background: plum;
+    color: #ffffff;
+    box-shadow: 0 0 4px 4px #c5aedc;
+}
+
+#figura{
+    width: 200px;
+    height: 200px;
+    background:  #c5aedc ;
+    border: 2px solid  #c5aedc ;
+     margin: 40px auto;
+     transition: .4S;
+}
+
+#figura.circulo /*id clase de un mismo elemento*/{
+    border-radius: 50% ;
+    background: #fbabac;
+    transform: rotate(360deg);
+    border: solid #fbabac ;
+}
+
+#figura.moveTop{
+    transform: translateY(-50px);
+}
+
+#figura.rectangulo{
+    width: 600px;
+    
+}
+
+#figura.rombo{
+    transform: rotate(45deg);
+}
+#figura.imagen{
+    background: url(../img/cat.jfif);
+    background-size: cover;
+}
+/*como cambiar fuente con javascript*/
+
+#figura.gif{
+    background: url(../img/cat.gif);
+    background-size: cover;
+}
+
+
+#figura.huevo{
+    width: 126px;
+    height: 180px;
+    background-color: #c5aedc;
+    -moz-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    -webkit-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    transition: .4s;
+}
+
+#figura.pacMan{
+    width:0;
+     height:0; 
+    border-right: 50px solid transparent; 
+    border-top: 50px solid #c5aedc; 
+    border-left: 50px solid #c5aedc; 
+    border-bottom: 50px solid #c5aedc; 
+    -moz-border-radius: 100%; 
+    -webkit-border-radius: 100%;
+     border-radius: 100%; 
+     background: transparent;
+}
+
+#figura.luna {
+    width: 100px;
+    height: 100px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: transparent;
+    -moz-box-shadow: 30px 10px 0 #c5aedc;
+    -webkit-box-shadow: 30px 10px 0 #c5aedc;
+    box-shadow: 30px 10px 0 #c5aedc;
+    background: transparent;
+}
+
+#figura.triangulo{
+    width: 0;
+    height: 0;
+    background: transparent;
+    border-right: 100px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 100px solid transparent;
+    border-bottom: 150px solid #c5aedc;
+}
+
+#figura.hoja{
+    width: 250px;
+    height: 100px;
+    -moz-border-radius: 0 50% / 0 100%;
+    -webkit-border-radius: 0 50% / 0 100%;
+    border-radius: 0 50% / 0 100%;
+    background: #c5aedc;
+    border: 3px solid #c5aedc;
+}
+
+.panel-superior {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    background: #c5aedc;
+    text-align: center;
+    padding: 20px;
+    transition: top 1s;
+}
+
+.panel-superior.active {
+    top: 0;
+}
+
+.panel-superior h2 {
+    color: rgb(0, 0, 0);
+}
+
+.panel-superior ul {
+    list-style: none;
+    padding: 0;
+}
+
+.panel-superior li {
+    margin-bottom: 10px;
+}
+
+.panel-superior a {
+    display: block;
+    background: #b083dd;
+    color: white;
+    padding: 8px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.panel-superior a:hover {
+    transform: scale(1.1);
+}
+
+.close {
+    cursor: pointer;
+}
+
+
+
+
+/*.panel-lateral{
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: -450px;
+    width: 400px;
+    background: hotpink;
+    text-align: center;
+    padding: 60px 20px;
+    height: 100vw;
+    transition: 1s;
+}
+
+.panel-lateral .active{
+    left: 0;
+}
+.panel-lateral h2{
+    color: white;
+}
+
+.panel-lateral a{
+    background: hotpink;
+    color: wheat;
+    padding: 8px 20px;
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+    text-decoration: none;
+
+}
+
+.panel-lateral a:hover{
+    transform: scale(1.1);
+}
+
+.panel-lateral a.close{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    background: #c5aedc;
+    color: white;
+    font-size: 22px;
+}
+*/
+.panel-lateral {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    background: #c5aedc ;
+    text-align: center;
+    padding: 20px;
+    transition: left 1s;
+}
+
+.panel-lateral.active {
+    left: 0;
+}
+
+.panel-lateral h2 {
+    color: rgb(0, 0, 0);
+}
+
+.panel-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+
+.panel-lateral li {
+    margin-bottom: 10px;
+}
+
+.panel-lateral a {
+    display: block;
+    background: #b083dd;
+    color: white;
+    padding: 8px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.panel-lateral a:hover {
+    transform: scale(1.1);
+}
+
+/*pendiente de funcionar PANEL LATERAL*/
+
+#figura.trapecio {
+    width: 250px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 100px solid #c5aedc;
+    background: transparent;
+}
+
+#figura.moveLeft{
+    transform: translateX(-50px);
+}
+
+#figura.moveBottom{
+    transform: translateY(50px);
+}
+
+#figura.moveRight{
+    transform: translateX(50px);
+}
+
+.colorCambiado {
+    border: 1px  solid blue;
+}
+
+button.active {
+    background-color: #943ce7 !important;
+    border-color: rgb(200, 171, 253) !important;
+    
+}
